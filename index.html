@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find the perfect name for your pet with PawName AI. Generate unique pet names instantly or upload a photo for AI-powered name suggestions based on appearance.">
+  <meta name="keywords" content="pet name generator, dog names, cat names, AI pet names, puppy names, unique pet names">
+  <meta name="author" content="PawName AI">
+  <meta property="og:title" content="PawName AI — Find the Perfect Name for Your Pet">
+  <meta property="og:description" content="Generate unique pet names instantly or upload a photo and let AI suggest names based on your pet's appearance.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pawname.ai">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>PawName AI — Find the Perfect Name for Your Pet 🐾</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+  <script type="application/ld+json" id="schema-app"></script>
+  <script type="application/ld+json" id="schema-faq"></script>
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-paws" aria-hidden="true">
+      <span class="paw-print" style="top:15%;left:10%;animation-delay:0s;">🐾</span>
+      <span class="paw-print" style="top:25%;right:15%;animation-delay:1s;">🐾</span>
+      <span class="paw-print" style="bottom:20%;left:20%;animation-delay:2s;">🐾</span>
+      <span class="paw-print" style="bottom:30%;right:10%;animation-delay:3s;">🐾</span>
+      <span class="paw-print" style="top:50%;left:5%;animation-delay:1.5s;">🐾</span>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge">✨ AI-Powered Pet Naming</div>
+      <h1 class="hero-title">Find the Perfect Name for Your Pet <span>🐾</span></h1>
+      <p class="hero-subtitle">Generate unique pet names instantly or upload a photo and let AI suggest names based on your pet's appearance.</p>
+      <div class="hero-cta">
+        <a href="#generator" class="btn btn-primary" id="hero-generate">Generate Names</a>
+        <a href="#ai-analyzer" class="btn btn-secondary" id="hero-upload">Upload Pet Photo</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-value">50K+</div>
+          <div class="hero-stat-label">Names Generated</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">10K+</div>
+          <div class="hero-stat-label">Happy Pet Parents</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">4.9★</div>
+          <div class="hero-stat-label">User Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ad Slot -->
+  <div class="container"><div class="ad-slot" data-ad="header">Advertisement Space — Google AdSense Ready</div></div>
+
+  <!-- Generator Section -->
+  <section class="section" id="generator">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">🎯 Name Generator</div>
+        <h2 class="section-title">Create Perfect Pet Names</h2>
+        <p class="section-subtitle">Choose your preferences or let AI analyze your pet's photo for personalized suggestions.</p>
+      </div>
+
+      <div class="generator-tabs reveal">
+        <button class="tab-btn active" data-tab="manual-tab">📝 Manual Generator</button>
+        <button class="tab-btn" data-tab="ai-tab">🤖 AI Photo Analyzer</button>
+        <button class="tab-btn" data-tab="profile-creator-tab" id="profile-creator-tab-btn">✨ AI Pet Profile Creator</button>
+      </div>
+
+      <!-- Manual Tab -->
+      <div class="tab-panel active" id="manual-tab">
+        <div class="glass-card reveal" style="padding:2rem;max-width:800px;margin:0 auto;">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="pet-type">Pet Type</label>
+              <select id="pet-type" class="form-select">
+                <option value="dog">🐕 Dog</option>
+                <option value="cat">🐈 Cat</option>
+                <option value="rabbit">🐇 Rabbit</option>
+                <option value="bird">🐦 Bird</option>
+                <option value="hamster">🐹 Hamster</option>
+                <option value="fish">🐠 Fish</option>
+                <option value="reptile">🦎 Reptile</option>
+                <option value="other">🐾 Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top:1.5rem;">
+            <label class="form-label">Gender</label>
+            <div class="pill-group">
+              <button class="pill gender-pill" data-gender="male">♂ Male</button>
+              <button class="pill gender-pill" data-gender="female">♀ Female</button>
+              <button class="pill gender-pill active" data-gender="unisex">⚥ Unisex</button>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top:1.5rem;">
+            <label class="form-label">Name Style</label>
+            <div class="style-tags">
+              <button class="style-tag active" data-style="cute">Cute</button>
+              <button class="style-tag" data-style="funny">Funny</button>
+              <button class="style-tag" data-style="royal">Royal 👑</button>
+              <button class="style-tag" data-style="fantasy">Fantasy 🐉</button>
+              <button class="style-tag" data-style="mythical">Mythical ✨</button>
+              <button class="style-tag" data-style="modern">Modern ⚡</button>
+              <button class="style-tag" data-style="nature">Nature 🌿</button>
+              <button class="style-tag" data-style="elegant">Elegant ⭐</button>
+              <button class="style-tag" data-style="unique">Unique 🔮</button>
+              <button class="style-tag" data-style="adventure">Adventure 🧭</button>
+            </div>
+          </div>
+
+          <!-- Bulk Generation Selector (Pro Exclusive) -->
+          <div class="form-group" id="bulk-generation-container" style="margin-top:1.5rem;display:none;">
+            <label class="form-label" for="generation-count">Generation Count (Pro Exclusive)</label>
+            <select id="generation-count" class="form-select">
+              <option value="20">20 Names</option>
+              <option value="50">50 Names</option>
+              <option value="100">100 Names (Bulk)</option>
+            </select>
+          </div>
+
+          <!-- Custom Style Input (Pro Exclusive) -->
+          <div class="form-group" id="custom-style-container" style="margin-top:1.5rem;display:none;">
+            <label class="form-label" for="custom-style-input">Custom Name Style (Pro Exclusive)</label>
+            <input type="text" id="custom-style-input" class="form-input" placeholder="e.g. pirate, cyberpunk, spunky, old-fashioned...">
+          </div>
+
+          <button class="btn btn-primary" id="manual-generate" style="width:100%;margin-top:2rem;">
+            ✨ Generate Names
+          </button>
+        </div>
+      </div>
+
+      <!-- AI Tab -->
+      <div class="tab-panel" id="ai-tab">
+        <div class="glass-card reveal" style="padding:2rem;max-width:800px;margin:0 auto;" id="ai-analyzer">
+          <h3 style="margin-bottom:1rem;text-align:center;">🤖 AI Pet Photo Name Generator</h3>
+          <p style="text-align:center;color:var(--text-secondary);margin-bottom:1.5rem;">Upload a photo and our AI will analyze your pet's appearance to suggest personalized names.</p>
+
+          <div class="upload-zone" id="upload-zone">
+            <input type="file" id="photo-input" accept="image/*" aria-label="Upload pet photo">
+            <div class="upload-placeholder">
+              <div class="upload-icon">📸</div>
+              <p><strong>Drag & drop your pet photo here</strong></p>
+              <p style="color:var(--text-muted);font-size:0.875rem;margin-top:0.5rem;">or click to browse • JPG, PNG, WebP</p>
+            </div>
+            <img id="preview-img" class="upload-preview" style="display:none;" alt="Pet photo preview">
+          </div>
+
+          <div class="ai-analysis" id="ai-analysis" style="display:none;"></div>
+
+          <button class="btn btn-primary" id="ai-generate" disabled style="width:100%;margin-top:1.5rem;">
+            🤖 Generate AI Names
+          </button>
+        </div>
+      </div>
+
+      <!-- AI Pet Profile Creator Tab (Pro Exclusive) -->
+      <div class="tab-panel" id="profile-creator-tab">
+        <div class="glass-card reveal" style="padding:2rem;max-width:800px;margin:0 auto;">
+          <h3 style="margin-bottom:1rem;text-align:center;">✨ AI Pet Profile Creator (Pro Exclusive)</h3>
+          <p style="text-align:center;color:var(--text-secondary);margin-bottom:1.5rem;">Generate a comprehensive digital profile card for your pet with character traits, diet suggestions, and a personalized description.</p>
+          
+          <div class="form-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
+            <div class="form-group">
+              <label class="form-label" for="profile-pet-name">Pet's Name</label>
+              <input type="text" id="profile-pet-name" class="form-input" placeholder="e.g. Max, Bella..." required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="profile-pet-type">Pet Type</label>
+              <select id="profile-pet-type" class="form-select">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="rabbit">Rabbit</option>
+                <option value="bird">Bird</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group" style="margin-bottom:1.5rem;">
+            <label class="form-label" for="profile-pet-breed">Breed (Optional)</label>
+            <input type="text" id="profile-pet-breed" class="form-input" placeholder="e.g. Golden Retriever, Siamese...">
+          </div>
+
+          <div class="form-group" style="margin-bottom:1.5rem;">
+            <label class="form-label" for="profile-pet-personality">Select Primary Trait</label>
+            <select id="profile-pet-personality" class="form-select">
+              <option value="playful">Playful & Energetic</option>
+              <option value="calm">Calm & Lazy</option>
+              <option value="majestic">Majestic & Independent</option>
+              <option value="curious">Curious & Clever</option>
+              <option value="shy">Shy & Sweet</option>
+            </select>
+          </div>
+
+          <button class="btn btn-primary" id="generate-pet-profile" style="width:100%;">
+            ✨ Create AI Pet Profile Card
+          </button>
+
+          <!-- Profile Output -->
+          <div id="pet-profile-output" class="glass-card" style="margin-top:2rem;padding:1.5rem;display:none;border-color:rgba(16,185,129,0.3);background:rgba(255,255,255,0.02);">
+            <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border-color);padding-bottom:1rem;margin-bottom:1rem;">
+              <h4 style="margin:0;font-size:1.25rem;" id="out-profile-name">🐾 Max's AI Profile</h4>
+              <span class="plan-badge plan-pro" style="font-size:0.75rem;">PRO PORTRAIT</span>
+            </div>
+            <div id="out-profile-content"></div>
+            <button class="btn btn-secondary btn-sm" id="download-profile-pdf" style="margin-top:1.5rem;">📄 Export Profile PDF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section class="section" id="results-section" style="display:none;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">✨ Your Names</div>
+        <h2 class="section-title"><span id="results-count">20</span> Perfect Names Found</h2>
+        <p class="section-subtitle">Click any name to copy, save favorites, or share with friends.</p>
+      </div>
+
+      <div class="results-grid" id="results-grid"></div>
+
+      <div class="results-actions">
+        <button class="btn btn-secondary" id="copy-all">📋 Copy All Names</button>
+        <button class="btn btn-secondary" id="download-pdf">📄 Download PDF</button>
+        <button class="btn btn-primary" id="regenerate">🔄 Regenerate Names</button>
+        <a href="favorites.html" class="btn btn-secondary">❤️ View Favorites</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Banner -->
+  <div class="container reveal">
+    <div class="premium-banner">
+      <h3>⭐ Go Premium — Unlimited AI Generations</h3>
+      <p>Unlock unlimited AI photo analysis, exclusive name styles, and ad-free experience.</p>
+      <button class="btn btn-secondary">Upgrade to Premium — $4.99/mo</button>
+    </div>
+  </div>
+
+  <!-- Popular Names -->
+  <section class="section" id="popular">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">🏆 Popular Names</div>
+        <h2 class="section-title">Trending & Popular Names</h2>
+        <p class="section-subtitle">See what other pet parents are naming their furry friends.</p>
+      </div>
+
+      <div class="popular-grid reveal">
+        <div class="glass-card popular-card">
+          <h3>🐕 Top Dog Names</h3>
+          <div class="names-list" id="top-dog-names"></div>
+        </div>
+        <div class="glass-card popular-card">
+          <h3>🐈 Top Cat Names</h3>
+          <div class="names-list" id="top-cat-names"></div>
+        </div>
+        <div class="glass-card popular-card">
+          <h3>📈 Trending This Month</h3>
+          <div class="names-list" id="trending-month"></div>
+        </div>
+        <div class="glass-card popular-card">
+          <h3>⭐ Celebrity-Inspired</h3>
+          <div class="names-list" id="celebrity-names"></div>
+        </div>
+        <div class="glass-card popular-card">
+          <h3>🐉 Fantasy Pet Names</h3>
+          <div class="names-list" id="fantasy-names-list"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ad Slot -->
+  <div class="container"><div class="ad-slot" data-ad="content">Advertisement Space — Google AdSense Ready</div></div>
+
+  <!-- How It Works -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">⚡ How It Works</div>
+        <h2 class="section-title">Three Simple Steps</h2>
+        <p class="section-subtitle">Finding the perfect pet name has never been easier.</p>
+      </div>
+
+      <div class="steps-grid reveal">
+        <div class="glass-card step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon">🎯</div>
+          <h3>Choose Your Method</h3>
+          <p>Select preferences manually or upload a photo for AI-powered analysis of your pet's unique traits.</p>
+        </div>
+        <div class="glass-card step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon">✨</div>
+          <h3>Generate Names</h3>
+          <p>Our smart engine creates 20 personalized names with meanings and reasons why each name fits your pet.</p>
+        </div>
+        <div class="glass-card step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon">❤️</div>
+          <h3>Save & Share</h3>
+          <p>Copy your favorites, save them for later, download as PDF, or share with friends and family.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Affiliate Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">🛍️ Pet Essentials</div>
+        <h2 class="section-title">Recommended Pet Products</h2>
+        <p class="section-subtitle">Everything your newly named pet needs to thrive.</p>
+      </div>
+      <div class="affiliate-grid reveal">
+        <div class="glass-card affiliate-card">
+          <div class="emoji">🦴</div>
+          <h4>Premium Dog Treats</h4>
+          <p style="font-size:0.875rem;color:var(--text-secondary);">Reward your pup with the best</p>
+        </div>
+        <div class="glass-card affiliate-card">
+          <div class="emoji">🐱</div>
+          <h4>Cat Toy Bundle</h4>
+          <p style="font-size:0.875rem;color:var(--text-secondary);">Keep kitty entertained for hours</p>
+        </div>
+        <div class="glass-card affiliate-card">
+          <div class="emoji">🛏️</div>
+          <h4>Cozy Pet Bed</h4>
+          <p style="font-size:0.875rem;color:var(--text-secondary);">Ultimate comfort for naps</p>
+        </div>
+        <div class="glass-card affiliate-card">
+          <div class="emoji">📸</div>
+          <h4>Pet Camera</h4>
+          <p style="font-size:0.875rem;color:var(--text-secondary);">Watch your pet while away</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">💬 Testimonials</div>
+        <h2 class="section-title">Loved by Pet Parents</h2>
+        <p class="section-subtitle">See what our community has to say about PawName AI.</p>
+      </div>
+
+      <div class="testimonials-grid reveal">
+        <div class="glass-card testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Uploaded a photo of our golden retriever puppy and got the most perfect names! We chose 'Nugget' and couldn't be happier."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👩</div>
+            <div>
+              <div class="testimonial-name">Sarah M.</div>
+              <div class="testimonial-pet">Owner of Nugget 🐕</div>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The fantasy name category is amazing! Our cat is now officially named 'Luna' and it fits her mysterious personality perfectly."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👨</div>
+            <div>
+              <div class="testimonial-name">James K.</div>
+              <div class="testimonial-pet">Owner of Luna 🐈</div>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Best pet name generator I've found! The AI photo analysis actually understood our dog's breed and coloring. Saved us hours of brainstorming."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👩</div>
+            <div>
+              <div class="testimonial-name">Emily R.</div>
+              <div class="testimonial-pet">Owner of Shadow 🐕‍🦺</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Preview -->
+  <section class="section" id="blog">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">📚 Pet Naming Guides</div>
+        <h2 class="section-title">From Our Blog</h2>
+        <p class="section-subtitle">Expert tips and inspiration for naming your new companion.</p>
+      </div>
+
+      <div class="blog-grid reveal">
+        <a href="blog/how-to-choose-pet-name.html" class="glass-card blog-card">
+          <div class="blog-card-image">📝</div>
+          <div class="blog-card-content">
+            <div class="blog-card-tag">Guide</div>
+            <h3>How to Choose the Perfect Pet Name</h3>
+            <p>Expert tips for selecting a name your pet will love and respond to.</p>
+          </div>
+        </a>
+        <a href="blog/popular-pet-naming-trends.html" class="glass-card blog-card">
+          <div class="blog-card-image">📈</div>
+          <div class="blog-card-content">
+            <div class="blog-card-tag">Trends</div>
+            <h3>Popular Pet Naming Trends in 2026</h3>
+            <p>Discover what's hot in pet naming this year.</p>
+          </div>
+        </a>
+        <a href="blog/best-fantasy-pet-names.html" class="glass-card blog-card">
+          <div class="blog-card-image">🐉</div>
+          <div class="blog-card-content">
+            <div class="blog-card-tag">Fantasy</div>
+            <h3>Best Fantasy Pet Names</h3>
+            <p>Magical names from myth, legend, and epic adventures.</p>
+          </div>
+        </a>
+        <a href="blog/cute-puppy-name-ideas.html" class="glass-card blog-card">
+          <div class="blog-card-image">🐶</div>
+          <div class="blog-card-content">
+            <div class="blog-card-tag">Puppies</div>
+            <h3>50 Cute Puppy Name Ideas</h3>
+            <p>The most adorable puppy names for your new furry friend.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">❓ FAQ</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about PawName AI.</p>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How does the AI pet name generator work?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Upload a photo of your pet and our AI analyzes their appearance — including fur color, breed characteristics, and personality cues from their expression. Based on this analysis, we generate personalized name suggestions with confidence scores and detailed reasoning for each name.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I upload any pet photo?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! Our AI works with photos of dogs, cats, rabbits, birds, hamsters, and other pets. For best results, use a clear, well-lit photo where your pet is the main subject. The AI processes everything locally in your browser for privacy.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Are the names unique?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We draw from a database of thousands of curated names organized by style, gender, and pet type. Combined with AI-enhanced suggestions based on your pet's unique traits, you'll get a diverse mix of classic favorites and distinctive options you won't find elsewhere.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I save names?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely! Click the heart icon on any name card to save it to your favorites. Access your saved names anytime from the Favorites page. You can also copy individual names, copy all names at once, or download them as a PDF.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is it free?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, PawName AI is completely free to use! Generate unlimited names, use the AI photo analyzer, save favorites, and download PDFs at no cost. We also offer an optional Premium plan for unlimited AI generations and an ad-free experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ad Slot -->
+  <div class="container"><div class="ad-slot" data-ad="footer">Advertisement Space — Google AdSense Ready</div></div>
+
+  <div id="footer"></div>
+  <div class="toast-container"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/plans.js"></script>
+  <script src="js/data/names.js"></script>
+  <script src="js/data/trending.js"></script>
+  <script src="js/generator.js"></script>
+  <script src="js/ai-analyzer.js"></script>
+  <script src="js/favorites.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.getElementById('schema-app').textContent = Components.schemaWebsite();
+    document.getElementById('schema-faq').textContent = Components.schemaFAQ();
+  </script>
+  <!-- Analytics placeholder -->
+  <script>
+    // Google Analytics / Cloudflare Analytics integration point
+    // window.gtag && gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+</body>
+</html>
